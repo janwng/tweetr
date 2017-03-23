@@ -29,5 +29,7 @@ main {
   width:450px;
   margin:0 auto;
   background-color:#fff;
-  margin-top:140px;
+  margin-top:80px;
+  height:auto;
+  padding-top:50px;
 }

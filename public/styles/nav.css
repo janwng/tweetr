@@ -7,6 +7,7 @@
   display: block;
   padding: 0 2em 0 2em;
   top:0px;
+  z-index:10;
  }
 
  #nav-bar .logo {
@@ -20,4 +21,20 @@
   float: left;
   font-size:200%;
   line-height:250%;
+ }
+
+ #nav-bar button {
+   float:right;
+   margin-top:0.8em;
+   background-color:#e8f4f2;
+   border:1px solid #000;
+   padding:1em;
+   border-radius:10px;
+   color:#00a087;
+ }
+
+ #nav-bar button:hover {
+   cursor:pointer;
+   background-color:#fff;
+   color:#000;
  }

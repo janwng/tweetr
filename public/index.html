@@ -16,11 +16,25 @@
     <!-- Nav CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Character Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+
+    <!-- Tweet Hover  JS -->
+    <script type="text/javascript" src="/scripts/indv-tweet-hover.js"></script>
+
+    <!-- Toggle Tweet Form JS -->
+    <script type="text/javascript" src="/scripts/new-tweet-toggle.js"></script>
+
   </head>
 
   <body>
@@ -29,45 +43,26 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+
+      <button id="btn">Compose</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus imperdiet aliquam. Nam faucibus velit vitae nunc auctor convallis. Proin luctus viverra erat, et convallis enim fermentum ac. Pellentesque odio magna, mollis tincidunt imperdiet sit amet, vehicula eget massa. Phasellus id est ultricies, tempor mi a, dictum eros. Aenean suscipit ultricies erat et mollis. Nunc hendrerit sapien eget nisi dapibus, ac ullamcorper nulla vestibulum. Sed vestibulum turpis mi, vel suscipit nibh scelerisque sed. Suspendisse potenti. Aliquam aliquam volutpat rhoncus.
-    </p>
 
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus imperdiet aliquam. Nam faucibus velit vitae nunc auctor convallis. Proin luctus viverra erat, et convallis enim fermentum ac. Pellentesque odio magna, mollis tincidunt imperdiet sit amet, vehicula eget massa. Phasellus id est ultricies, tempor mi a, dictum eros. Aenean suscipit ultricies erat et mollis. Nunc hendrerit sapien eget nisi dapibus, ac ullamcorper nulla vestibulum. Sed vestibulum turpis mi, vel suscipit nibh scelerisque sed. Suspendisse potenti. Aliquam aliquam volutpat rhoncus.
-    </p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets" method="POST">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input id="submit-button" type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
 
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus imperdiet aliquam. Nam faucibus velit vitae nunc auctor convallis. Proin luctus viverra erat, et convallis enim fermentum ac. Pellentesque odio magna, mollis tincidunt imperdiet sit amet, vehicula eget massa. Phasellus id est ultricies, tempor mi a, dictum eros. Aenean suscipit ultricies erat et mollis. Nunc hendrerit sapien eget nisi dapibus, ac ullamcorper nulla vestibulum. Sed vestibulum turpis mi, vel suscipit nibh scelerisque sed. Suspendisse potenti. Aliquam aliquam volutpat rhoncus.
-    </p>
+      <section class="tweets-container">
 
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus imperdiet aliquam. Nam faucibus velit vitae nunc auctor convallis. Proin luctus viverra erat, et convallis enim fermentum ac. Pellentesque odio magna, mollis tincidunt imperdiet sit amet, vehicula eget massa. Phasellus id est ultricies, tempor mi a, dictum eros. Aenean suscipit ultricies erat et mollis. Nunc hendrerit sapien eget nisi dapibus, ac ullamcorper nulla vestibulum. Sed vestibulum turpis mi, vel suscipit nibh scelerisque sed. Suspendisse potenti. Aliquam aliquam volutpat rhoncus.
-    </p>
+      </section>
 
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus imperdiet aliquam. Nam faucibus velit vitae nunc auctor convallis. Proin luctus viverra erat, et convallis enim fermentum ac. Pellentesque odio magna, mollis tincidunt imperdiet sit amet, vehicula eget massa. Phasellus id est ultricies, tempor mi a, dictum eros. Aenean suscipit ultricies erat et mollis. Nunc hendrerit sapien eget nisi dapibus, ac ullamcorper nulla vestibulum. Sed vestibulum turpis mi, vel suscipit nibh scelerisque sed. Suspendisse potenti. Aliquam aliquam volutpat rhoncus.
-    </p>
-
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus imperdiet aliquam. Nam faucibus velit vitae nunc auctor convallis. Proin luctus viverra erat, et convallis enim fermentum ac. Pellentesque odio magna, mollis tincidunt imperdiet sit amet, vehicula eget massa. Phasellus id est ultricies, tempor mi a, dictum eros. Aenean suscipit ultricies erat et mollis. Nunc hendrerit sapien eget nisi dapibus, ac ullamcorper nulla vestibulum. Sed vestibulum turpis mi, vel suscipit nibh scelerisque sed. Suspendisse potenti. Aliquam aliquam volutpat rhoncus.
-    </p>
-
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus imperdiet aliquam. Nam faucibus velit vitae nunc auctor convallis. Proin luctus viverra erat, et convallis enim fermentum ac. Pellentesque odio magna, mollis tincidunt imperdiet sit amet, vehicula eget massa. Phasellus id est ultricies, tempor mi a, dictum eros. Aenean suscipit ultricies erat et mollis. Nunc hendrerit sapien eget nisi dapibus, ac ullamcorper nulla vestibulum. Sed vestibulum turpis mi, vel suscipit nibh scelerisque sed. Suspendisse potenti. Aliquam aliquam volutpat rhoncus.
-    </p>
-
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus imperdiet aliquam. Nam faucibus velit vitae nunc auctor convallis. Proin luctus viverra erat, et convallis enim fermentum ac. Pellentesque odio magna, mollis tincidunt imperdiet sit amet, vehicula eget massa. Phasellus id est ultricies, tempor mi a, dictum eros. Aenean suscipit ultricies erat et mollis. Nunc hendrerit sapien eget nisi dapibus, ac ullamcorper nulla vestibulum. Sed vestibulum turpis mi, vel suscipit nibh scelerisque sed. Suspendisse potenti. Aliquam aliquam volutpat rhoncus.
-    </p>
-
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus imperdiet aliquam. Nam faucibus velit vitae nunc auctor convallis. Proin luctus viverra erat, et convallis enim fermentum ac. Pellentesque odio magna, mollis tincidunt imperdiet sit amet, vehicula eget massa. Phasellus id est ultricies, tempor mi a, dictum eros. Aenean suscipit ultricies erat et mollis. Nunc hendrerit sapien eget nisi dapibus, ac ullamcorper nulla vestibulum. Sed vestibulum turpis mi, vel suscipit nibh scelerisque sed. Suspendisse potenti. Aliquam aliquam volutpat rhoncus.
-    </p>
     </main>
 
   </body>
