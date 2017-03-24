@@ -1,5 +1,8 @@
+$gray-border: 1px solid #ddd;
+
+
 main > .new-tweet {
-  border:1px solid #ddd;
+  border: $gray-border;
   border-radius:10px;
   padding:0 1em 1em 1em;
   margin:0 2em 0 2em;
@@ -19,7 +22,7 @@ form > .counter {
 }
 
 article {
-  border:1px solid #ddd;
+  border: $gray-border;
   border-radius:10px;
   margin:1em 2em 1em 2em;
   overflow:hidden;
@@ -58,10 +61,6 @@ h2 {
   padding:1em;
 }
 
-section.user-tweet p {
-
-}
-
 .indv-footer-icon {
   text-decoration:none;
   color:rgba(0,0,0,0.4);
@@ -75,7 +74,7 @@ section.user-tweet p {
 
 
 .tweets-container footer {
-  border-top:1px solid #ddd;
+  border-top:$gray-border;
   padding:0 1em 0 1em;
 }
 
