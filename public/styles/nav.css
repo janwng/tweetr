@@ -38,3 +38,7 @@
    background-color:#fff;
    color:#000;
  }
+
+ #nav-bar button i {
+   margin-right:0.5em;
+ }

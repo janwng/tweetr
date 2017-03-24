@@ -17,6 +17,8 @@ $( document ).ready(function() {
 
     if (remainingLength < 0) {
       $(this).siblings('.counter').css("color", "red");
+    } else {
+      $(this).siblings('.counter').css("color", "black");
     }
   });
 

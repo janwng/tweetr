@@ -45,6 +45,8 @@ h2 {
   float:left;
   margin-right:1em;
   width:70px;
+  border-radius:10px;
+  margin-top:-4px;
 }
 
 .tweets-container header p {
@@ -60,6 +62,17 @@ section.user-tweet p {
 
 }
 
+.indv-footer-icon {
+  text-decoration:none;
+  color:rgba(0,0,0,0.4);
+  padding:0.2em;
+}
+
+.indv-footer-icon:hover {
+  color:rgba(0,0,0,1);
+  cursor:pointer;
+}
+
 
 .tweets-container footer {
   border-top:1px solid #ddd;
@@ -69,5 +82,4 @@ section.user-tweet p {
 .tweets-container footer div.footer-icons {
   float:right;
   margin-top:-40px;
-  margin:1em;
 }

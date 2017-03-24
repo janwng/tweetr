@@ -37,7 +37,9 @@ $( document ).ready(function() {
 
   function createFooter(timestamp) {
     var $footer = $("<footer>");
-    $footer.append($("<p>").text(timestamp));
+
+    var timeAgo = timeSince(timestamp);
+    $footer.append($("<p>").text((timeAgo) + " ago"));
 
     var $divIcons = createFooterIcons();
     $footer.append($divIcons);
@@ -46,9 +48,14 @@ $( document ).ready(function() {
 
   function createFooterIcons() {
     var $footerIconsDiv = ($("<div>").addClass("footer-icons"));
-    $footerIconsDiv.append($("<a>", {href: "/", html: $("<img>", {src: "https://cdn0.iconfinder.com/data/icons/typicons-2/24/flag-24.png"})}));
-    $footerIconsDiv.append($("<a>", {href: "/", html: $("<img>", {src: "https://cdn3.iconfinder.com/data/icons/simple-files-1/128/Update-24.png"})}));
-    $footerIconsDiv.append($("<a>", {href: "/", html: $("<img>", {src: "https://cdn3.iconfinder.com/data/icons/simple-files-1/128/Like-24.png"})}));
+
+    $footerIconsDiv.append($("<a>", {href: "/", html: $("<i>")}).addClass("fa fa-flag indv-footer-icon"));
+    $footerIconsDiv.append($("<a>", {href: "/", html: $("<i>")}).addClass("fa fa-retweet indv-footer-icon"));
+    $footerIconsDiv.append($("<a>", {href: "/", html: $("<i>")}).addClass("fa fa-heart indv-footer-icon"));
+
+    // $footerIconsDiv.append($("<a>", {href: "/", html: $("<img>", {src: "https://cdn0.iconfinder.com/data/icons/typicons-2/24/flag-24.png"})}).addClass("indv-footer-icon"));
+    // $footerIconsDiv.append($("<a>", {href: "/", html: $("<img>", {src: "https://cdn3.iconfinder.com/data/icons/simple-files-1/128/Update-24.png"})}).addClass("indv-footer-icon"));
+    // $footerIconsDiv.append($("<a>", {href: "/", html: $("<img>", {src: "https://cdn3.iconfinder.com/data/icons/simple-files-1/128/Like-24.png"})}).addClass("indv-footer-icon"));
 
     return $footerIconsDiv;
   }
@@ -120,4 +127,33 @@ $( document ).ready(function() {
 		});
 
 	});
+
+
+  function timeSince(date) {
+
+      var seconds = Math.floor((new Date() - date) / 1000);
+
+      var interval = Math.floor(seconds / 31536000);
+
+      if (interval > 1) {
+          return interval + " years";
+      }
+      interval = Math.floor(seconds / 2592000);
+      if (interval > 1) {
+          return interval + " months";
+      }
+      interval = Math.floor(seconds / 86400);
+      if (interval > 1) {
+          return interval + " days";
+      }
+      interval = Math.floor(seconds / 3600);
+      if (interval > 1) {
+          return interval + " hours";
+      }
+      interval = Math.floor(seconds / 60);
+      if (interval > 1) {
+          return interval + " minutes";
+      }
+      return Math.floor(seconds) + " seconds";
+  }
 });
