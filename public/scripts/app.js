@@ -107,6 +107,7 @@ $( document ).ready(function() {
 
     if ($inputTweetText.length > 140) {
       alert("Your message must be shorter than 140 characters!");
+      return false;
     } else if ($inputTweetText === "") {
       alert("Please input something!");
     }

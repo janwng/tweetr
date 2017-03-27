@@ -6,12 +6,16 @@
 
 $( document ).ready(function() {
 
+  $( ".new-tweet form" ).on( "submit", function() {
+    $('.counter').text('140');
+  });
+
   $('textarea').keyup(function() {
+
     let value = $(this).val();
     let maxLength = 140;
     let remainingLength = maxLength - value.length;
     console.log(remainingLength);
-
 
     $(this).siblings('.counter').text(remainingLength);
 
@@ -21,5 +25,4 @@ $( document ).ready(function() {
       $(this).siblings('.counter').css("color", "black");
     }
   });
-
 });
